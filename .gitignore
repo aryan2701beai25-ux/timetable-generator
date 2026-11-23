@@ -1,0 +1,15 @@
+# Java build output
+*.class
+build/
+out/
+
+# Generated SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary build folders
+.build-check/
+
+# Bundled team package archive; source files are tracked separately
+Timetable-Generator-Team-Package.zip
