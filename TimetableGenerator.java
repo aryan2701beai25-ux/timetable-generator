@@ -1,7 +1,6 @@
 import java.io.IOException;
-import java.sql.SQLException;
-import java.util.List;
-import java.util.Scanner;
+import java.sql.*;
+import java.util.*;
 
 /** Console flow for default timetable lookup and group-specific alternatives. */
 public class TimetableGenerator {

@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /** Builds an option by exchanging the time slots of two sessions in one group. */
 public final class TimetableSessionReorder {

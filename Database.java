@@ -1,14 +1,9 @@
- import java.io.BufferedReader;
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.Locale;
+import java.sql.*;
+import java.util.*;
 
 public class Database {
     private static final String DATABASE_URL = "jdbc:sqlite:timetable_generator.db";

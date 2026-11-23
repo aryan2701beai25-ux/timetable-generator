@@ -1,15 +1,8 @@
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Locale;
-import java.util.Scanner;
+import java.sql.*;
+import java.util.*;
 
-/* Small timetable components used by the generator and its SQLite storage. */
+
 
 class GroupCodeRules {
     static String normalize(String input) {

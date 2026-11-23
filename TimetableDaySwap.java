@@ -1,4 +1,4 @@
-import java.util.List;
+import java.util.*;
 
 /** Builds an option by exchanging two weekdays within one group. */
 public final class TimetableDaySwap {
