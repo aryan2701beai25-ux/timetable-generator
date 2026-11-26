@@ -13,8 +13,12 @@ public class TimetableGenerator {
                         "Do you want the default timetable? (yes/no): ").trim();
 
                 if (useDefault.equalsIgnoreCase("yes") || useDefault.equalsIgnoreCase("y")) {
-                    String group = TimetableOptionStore.normalizeGroup(
-                            TimetablePrompt.ask(input, "Enter group (G8-G16): "));
+                    String groupInput = TimetablePrompt.ask(input, "Enter group (G8-G16): ");
+                    if (groupInput.trim().isEmpty()) {
+                        System.out.println("Goodbye.");
+                        return;
+                    }
+                    String group = TimetableOptionStore.normalizeGroup(groupInput);
                     String day = TimetablePrompt.ask(input, "Enter day: ");
                     DefaultDayRequest request = new DefaultDayRequest(group, day);
                     TimetableOptionStore.printDay(defaultSchedule, request.group, request.day);
@@ -24,8 +28,12 @@ public class TimetableGenerator {
                     throw new IllegalArgumentException("Enter yes or no.");
                 }
 
-                String group = TimetableOptionStore.normalizeGroup(
-                        TimetablePrompt.ask(input, "Enter group to change (G8-G16): "));
+                String groupInput = TimetablePrompt.ask(input, "Enter group to change (G8-G16): ");
+                if (groupInput.trim().isEmpty()) {
+                    System.out.println("Goodbye.");
+                    return;
+                }
+                String group = TimetableOptionStore.normalizeGroup(groupInput);
                 System.out.println("1. Swap two days");
                 System.out.println("2. Reorder two sessions");
                 String choice = TimetablePrompt.ask(input, "Choose a change: ").trim();
